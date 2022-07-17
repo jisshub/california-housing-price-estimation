@@ -36,4 +36,12 @@ pip install -r requirements.txt
 ```sh
 pip freeze > requirements.txt
 ```
+## CI/CD pipeline
 
+To setup CI/CD pipeline in heroku, WE NEED TO GIVE BELOW INFORMATION
+
+1. HEROKU_EMAIL
+2. HEROKU_API_KEY
+3. HEROKU_APP_NAME
+
+https://dashboard.heroku.com/account
