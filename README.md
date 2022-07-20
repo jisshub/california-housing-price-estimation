@@ -40,8 +40,38 @@ pip freeze > requirements.txt
 
 To setup CI/CD pipeline in heroku, WE NEED TO GIVE BELOW INFORMATION
 
-1. HEROKU_EMAIL
-2. HEROKU_API_KEY
-3. HEROKU_APP_NAME
+1. HEROKU_EMAIL = jissmon476@gmail.com
+2. HEROKU_API_KEY = 4712e2b4-2f7b-4a47-b0f5-9b982b47d340
+3. HEROKU_APP_NAME = housing-prediction-regression
 
 https://dashboard.heroku.com/account
+
+## Create a Docker File
+
+- Install docker in our system.
+
+Create a file name *Dockerfile* in our root folder.
+
+* Write instructions in Dockerfile to create a Docker image.
+    - Give the python version to be used inside our docker machine.
+    - virtual environment not needed in our docker machine.
+    - No need of git files in our docker machine, so ignore them.
+    - Copy the contents to app folder in our docker machine.
+    - Change working directory to app folder in our docker machine.
+    - Run requirements.txt file in our docker machine.
+    - Expose port number which will be sent from environment variable to our docker machine.
+    - Launch our applicatioin with help of gunicorn command.
+
+    ```dockerfile
+    FROM python:3.9
+    COPY . /app
+    WORKDIR /app
+    RUN pip install -r requirements.txt
+    EXPOSE $PORT
+    CMD gunicorn --worker=4 --bind 0.0.0.0:$PORT app:app 
+    ```
+
+
+TIME: 1:44:20
+
+
