@@ -178,6 +178,40 @@ jobs:
 - Workflow runs on every push to main branch.
 - Work flow runs in latest ubuntu.
 
+Time: 2:23:00
+
+
+## Remote Repository of Project
+
+- Open github remote repo.
+- Navigate to settings
+- Choose Actions from Secrets
+
+![](./images/image1.jpg)
+
+- Then create new repository secret.
+
+![](./images/image2.jpg)
+
+- Choose heroku email as secret name.
+- Then enter your heroku email id as value.
+
+![](./images/image3.jpg)
+
+- Then click Add Secret button.
+- Similary create another secret for **HEROKU_API_KEY** and **HEROKU_APP_NAME**.
+- Then move to Actions tab.
+- Click the workflow.
+- Rerun all jobs.
+
+![](./images/image4.jpg)
+
+- Here build is succesful and we have our docker image deployed to heroku.
+
+ 
+Github Actions Documentation - https://docs.github.com/en/actions
+
+
 
 
 
