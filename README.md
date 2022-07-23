@@ -71,7 +71,38 @@ Create a file name *Dockerfile* in our root folder.
     CMD gunicorn --worker=4 --bind 0.0.0.0:$PORT app:app 
     ```
 
+## Build Docker Image
 
-TIME: 1:44:20
+```sh
+docker build -t <iamge-name>:<tagname> .
+```
+
+Note: Image name must be lowercase.
+
+## To list docker image
+
+```sh
+docker images
+```
+
+## Run docker image
+    
+```sh
+docker run -p 5000:5000 PORT:5000
+```
+
+## Check running containers in docker
+
+```sh 
+docker ps
+```
+
+## To stop docker container
+
+```sh
+docker stop <container-id>
+```
+
+
 
 
